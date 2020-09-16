@@ -1,0 +1,19 @@
+Aplicativo: ComVida-19
+
+Tabelas:
+tipo_usuario
+usuario
+paciente
+sintoma
+intencidade
+paciente_sintoma
+acompanhamento
+cidade
+estado
+regiao
+orientacao
+alerta
+
+
+
+
