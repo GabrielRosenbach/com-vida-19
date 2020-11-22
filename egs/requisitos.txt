@@ -1,0 +1,29 @@
+Requisitos: 
+
+Cadastrar dados do usuário (dados pesoais, geolocalização).
+Disponibilizar análise de sintomas.
+Aviso a cada 48h.
+Disponibilizar consulta e relatórios por localização.
+Armazenar casos suspeitos.
+Importar dados de outras plataformas.
+Cadastro de orientações ao usuário.
+Controle do usuário.
+
+Usuário:
+
+Cadastrar dados gerais [nome, data nascimento, email, celular, senha, peso, altura, sexo, cep, rua, numero, bairro].
+Informar sintomas e intensidade [Febre, tosse, falta de ar, dor no corpo, dor de garganta, calafrio, dor muscular, congestão nasal e coriza].
+Efetuar consulta [gráfico, relatório] e fazer download por localização [região, estado, cep, geolocalização, país] e filtros [sexo, faixa etária].
+ 
+Sistema:
+
+Análise de sintomas de acordo com a intensidade [1 - Pouco, 2 - Moderado, 3 - Constante] e retorno ao usuário.
+Aviso ao usuário a cada 48h via SMS para acompanhar casos.
+Disponibilizar consultas e relatórios.
+Permitir importar dados de outras plataformas. Classificar pacientes [1 - Usuários, 2 - Plataformas].
+Cadastrar orientações ao usuário.
+Controlar acesso [1 - Usuário, 2 - Administrador].
+
+ 
+
+
