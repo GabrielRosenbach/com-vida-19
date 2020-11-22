@@ -1,5 +1,4 @@
 Aplicativo: ComVida-19
-
 Tabelas:
 tipo_usuario
 usuario
