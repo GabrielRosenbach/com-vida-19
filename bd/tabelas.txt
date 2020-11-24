@@ -1,0 +1,7 @@
+tipo_usuario [codtipusu, destipusu]
+usuario [codusu, codtipusu, nomusu, senhausu, emailusu, telusu, loginusu]
+endereco [codend, ruaend, numend, cidend, estend]
+paciente [codpac, codusu, altpac, pesopac, datanaspac, ruapac]
+sintoma [codsin, dessin]
+intencidade [codint, desint]
+paciente_sintoma [codpacsin, codpac, codsin, codint]
