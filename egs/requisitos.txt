@@ -1,6 +1,6 @@
 Requisitos: 
 
-Cadastrar dados do usuário (dados pesoais, geolocalização).
+Cadastrar dados do usuário (dados pessoais, geolocalização).
 Disponibilizar análise de sintomas.
 Aviso a cada 48h.
 Disponibilizar consulta e relatórios por localização.
