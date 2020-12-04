@@ -1,0 +1,44 @@
+inherited frmLogin_iPhone4in: TfrmLogin_iPhone4in
+  ClientHeight = 548
+  ClientWidth = 320
+  DesignerMasterStyle = 3
+  inherited imgPrincipal: TImage
+    Size.Width = 320.000000000000000000
+    Size.Height = 548.000000000000000000
+    inherited RectLogin: TRectangle
+      Margins.Bottom = 50.000000000000000000
+      Position.Y = 335.000000000000000000
+      Size.Width = 240.000000000000000000
+      inherited lblLogin: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited edtSenha: TEdit
+      Size.Height = 30.000000000000000000
+      inherited imgPass: TImage
+        Size.Height = 30.000000000000000000
+      end
+    end
+    inherited edtLogin: TEdit
+      Size.Height = 30.000000000000000000
+      inherited Image1: TImage
+        Size.Height = 30.000000000000000000
+      end
+    end
+    inherited imgLogo: TImage
+      Size.Width = 220.000000000000000000
+    end
+    inherited imgBottom: TImage
+      Position.Y = 435.000000000000000000
+      Size.Width = 320.000000000000000000
+      inherited lblRegister: TLabel
+        Size.Width = 320.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited lblForgotPass: TLabel
+      Position.Y = 475.000000000000000000
+      Size.Width = 320.000000000000000000
+    end
+  end
+end

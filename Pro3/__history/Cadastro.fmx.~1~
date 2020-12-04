@@ -1,0 +1,59 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 295
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object imgPrincipal: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 295.000000000000000000
+    Size.Height = 430.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object imgLogo: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Top
+    Size.Width = 295.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object edtNome: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Position.X = 96.000000000000000000
+    Position.Y = 136.000000000000000000
+  end
+  object edtEmail: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    Position.X = 96.000000000000000000
+    Position.Y = 192.000000000000000000
+  end
+  object edtTel: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 5
+    Position.X = 96.000000000000000000
+    Position.Y = 232.000000000000000000
+  end
+  object edtLogin: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 6
+    Position.X = 96.000000000000000000
+    Position.Y = 272.000000000000000000
+  end
+  object edtSenha: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 7
+    Position.X = 96.000000000000000000
+    Position.Y = 312.000000000000000000
+  end
+end

@@ -1,0 +1,23 @@
+inherited frmLogin_NmXhdpiPh: TfrmLogin_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 3
+  inherited imgPrincipal: TImage
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    inherited RectLogin: TRectangle
+      Position.Y = 490.000000000000000000
+      Size.Width = 320.000000000000000000
+      inherited lblLogin: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited imgLogo: TImage
+      Size.Width = 300.000000000000000000
+    end
+    inherited imgBottom: TImage
+      Position.Y = 590.000000000000000000
+      Size.Width = 400.000000000000000000
+    end
+  end
+end

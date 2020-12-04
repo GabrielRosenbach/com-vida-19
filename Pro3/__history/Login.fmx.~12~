@@ -1,0 +1,100 @@
+object frmLogin: TfrmLogin
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 542
+  ClientWidth = 394
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object imgPrincipal: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 394.000000000000000000
+    Size.Height = 542.000000000000000000
+    Size.PlatformDefault = False
+    object RectLogin: TRectangle
+      Align = Bottom
+      Cursor = crHandPoint
+      Margins.Left = 40.000000000000000000
+      Margins.Right = 40.000000000000000000
+      Margins.Bottom = 50.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 405.000000000000000000
+      Size.Width = 314.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      XRadius = 25.000000000000000000
+      YRadius = 25.000000000000000000
+      OnClick = RectLoginClick
+      object lblLogin: TLabel
+        Align = Center
+        StyledSettings = [FontColor]
+        TextSettings.Font.Family = 'Sitka Text'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.HorzAlign = Center
+        Text = 'LOGIN'
+        TabOrder = 0
+      end
+    end
+    object edtSenha: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Center
+      TabOrder = 2
+      Margins.Top = 50.000000000000000000
+      Size.Width = 180.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object edtLogin: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Center
+      TabOrder = 1
+      TextSettings.FontColor = claWhite
+      Margins.Bottom = 50.000000000000000000
+      Size.Width = 180.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size, Style]
+    end
+    object imgLogo: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Top
+      Margins.Left = 50.000000000000000000
+      Margins.Top = 30.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Position.X = 50.000000000000000000
+      Position.Y = 30.000000000000000000
+      Size.Width = 294.000000000000000000
+      Size.Height = 83.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object imgBottom: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Bottom
+      Margins.Bottom = 5.000000000000000000
+      Position.Y = 505.000000000000000000
+      Size.Width = 394.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      object lblRegister: TLabel
+        Align = Client
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 394.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Text = 'Don'#39't have a account? REGISTER HERE'
+        TabOrder = 0
+      end
+    end
+  end
+end

@@ -1,0 +1,31 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 355
+  ClientWidth = 309
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lblAtivoDesativo: TLabel
+    StyledSettings = [FontColor]
+    Position.Y = 144.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Family = 'Segoe UI Emoji'
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.Font.StyleExt = {00040000000200000004000000}
+    Text = 'Servidor Ativado:'
+    TabOrder = 0
+  end
+  object Switch: TSwitch
+    IsChecked = True
+    Position.X = 216.000000000000000000
+    Position.Y = 160.000000000000000000
+    TabOrder = 1
+    OnClick = InativoAtivo
+  end
+end

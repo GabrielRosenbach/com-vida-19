@@ -1,0 +1,54 @@
+unit Login;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Edit, FMX.Objects,REST.Types;
+
+type
+  TfrmLogin = class(TForm)
+    imgPrincipal: TImage;
+    edtLogin: TEdit;
+    edtSenha: TEdit;
+    imgLogin: TImage;
+    Label1: TLabel;
+    procedure imgLoginClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLogin: TfrmLogin;
+
+implementation
+
+{$R *.fmx}
+   uses DataModule;
+
+
+procedure TfrmLogin.imgLoginClick(Sender: TObject);
+begin
+    DM.RESTRequestValidarLogin.Params.Clear;
+    DM.RESTRequestValidarLogin.AddParameter('login',edtLogin.Text,TRESTRequestparameterKind.pkGETorPOST);
+    DM.RESTRequestValidarLogin.AddParameter('senha',edtSenha.Text,TrestRequestparameterKind.pkGETorPOST);
+    DM.RESTRequestValidarLogin.Execute;
+
+    if(DM.RESTRequestValidarLogin.Response.JSONValue.ToString.Equals('{"retorno":"Certo"}'))then
+      begin
+        if not Assigned(frmPrincipal) then
+          Application.CreateForm(TFrmPrincipal, frmPrincipal);
+          frmPrincipal.show;
+          Application.MainForm := frmPrincipal;
+          frmLogin.Close;
+      end
+      else
+      begin
+        showmessage(DM.RESTRequestValidarLogin.Response.JSONValue.ToString);
+      end;
+end;
+
+end.

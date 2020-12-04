@@ -1,0 +1,233 @@
+unit DataModule;
+
+interface
+
+uses
+  System.SysUtils, System.Classes,uDWDataModule, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.Phys.PG, FireDAC.Phys.PGDef, FireDAC.FMXUI.Wait, Data.DB,
+  FireDAC.Comp.Client, uDWAbout, uRESTDWServerEvents,uDWJSONObject,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Comp.DataSet,System.Json, uDWConsts;
+
+type
+  TDM = class(TServerMethodDataModule)
+    FDConnection1: TFDConnection;
+    Driver: TFDPhysPgDriverLink;
+    DWServerEvents1: TDWServerEvents;
+    FDQUsuario: TFDQuery;
+    procedure DWServerEvents1EventsValidarLoginReplyEvent(var Params: TDWParams;
+      var Result: string);
+    procedure DWServerEvents1EventsListarClientesReplyEvent(
+      var Params: TDWParams; var Result: string);
+    procedure DWServerEvents1EventsListarPessoasReplyEvent(
+      var Params: TDWParams; var Result: string);
+    procedure DWServerEvents1EventsAdicionarClientesReplyEvent(
+      var Params: TDWParams; var Result: string);
+    procedure DWServerEvents1EventsAtualizarClientesReplyEvent(
+      var Params: TDWParams; var Result: string);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DM: TDM;
+
+implementation
+
+{%CLASSGROUP 'FMX.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TDM.DWServerEvents1EventsAdicionarClientesReplyEvent(
+  var Params: TDWParams; var Result: string);
+  //localhost:8082/AdicionarClientes?nome=xxx&filhos=xxxx
+  var
+  FDQClientes : TFDQuery;
+  json : TJSONObject;
+begin
+ try
+   json := TJsonObject.Create;
+   FDQClientes := TFDQuery.Create(nil);
+   FDQclientes.Connection := DM.FDConnection1;
+
+   if ((params.ItemsString['nome'].AsString = '') OR
+   ( params.ItemsString['filhos'].AsString = '' ))
+   then
+   begin
+     json.AddPair('retorno','Parametros não informados');
+     Result := json.ToString;
+     exit;
+   end;
+
+   try
+     FDQclientes.Active := false;
+     FDQClientes.SQL.Clear;
+     FDQClientes.SQL.Add('insert into clientes (nomcli,filcli)');
+     FDQClientes.SQL.Add('values (:nome, :filhos)');
+     FDQClientes.ParamByName('nome').Value := params.ItemsString['nome'].AsString;
+     FDQClientes.ParamByName('filhos').Value := params.ItemsString['filhos'].AsString;
+     FDQClientes.ExecSQL;
+     json.AddPair('retorno', 'OK');
+     except on e:exception do
+     json.AddPair('retorno', e.Message)
+
+   end;
+   Result := json.ToString;
+ finally
+  FDQClientes.DisposeOf;
+  json.DisposeOf;
+ end;
+end;
+
+procedure TDM.DWServerEvents1EventsAtualizarClientesReplyEvent(
+  var Params: TDWParams; var Result: string);
+  //localhost:8082/AtualizarClientes?nome=xxx&filhos=xxx
+  var
+  json : TJSONObject;
+  FDQAtualizar : TFDQuery;
+begin
+try
+
+  json := TJSONoBJECT.Create;
+  FDQAtualizar := TFDQuery.Create(nil);
+  FDQAtualizar.Connection := DM.FDConnection1;
+
+    if((params.ItemsString['nome'].AsString ='')OR
+    (params.ItemsString['filhos'].AsString =''))then
+    begin
+      json.AddPair('retorno','Parametros nao informados');
+      result := json.ToString;
+      exit;
+    end;
+
+    try
+      FDQAtualizar.Active := false;
+      FDQAtualizar.SQL.Clear;
+      FDQAtualizar.SQL.Add('update clientes set filcli =:filhos');
+      FDQAtualizar.SQL.Add('where nomcli =:nome');
+      FDQAtualizar.ParamByName('nome').Value := params.ItemsString['nome'].AsString;
+      FDQAtualizar.ParamByName('filhos').Value := params.ItemsString['filhos'].AsString;
+      FDQAtualizar.ExecSQL;
+      json.AddPair('retorno','ok');
+      except on e:exception do
+      json.AddPair('retorno',e.Message);
+
+    end;
+    result := json.ToString;
+    finally
+    FDQAtualizar.DisposeOf;
+    json.DisposeOf;
+  end;
+end;
+
+procedure TDM.DWServerEvents1EventsListarClientesReplyEvent(
+  var Params: TDWParams; var Result: string);
+  var
+
+  FDQCliente : TFDQuery;
+  json : uDWJSONObject.TJSONValue;
+begin
+     try
+       FDQCliente := TFDQuery.Create(nil);
+       FDQCliente.Connection := DM.FDConnection1;
+       json := uDWJSONObject.TJSONValue.Create;
+
+       FDQCliente.Active := false;
+       FDQCliente.SQL.Clear;
+       FDQCliente.SQL.Add('SELECT * FROM CLIENTES');
+       fdqcLIENTE.SQL.Add('ORDER BY NOMCLI');
+       FDQCliente.Active := true;
+
+       json.LoadFromDataset('', FDQcliente,false,jmPUREJson);
+
+       Result := json.ToJSON;
+
+     finally
+       json.DisposeOf;
+       FDQCliente.DisposeOf;
+     end;
+end;
+
+procedure TDM.DWServerEvents1EventsListarPessoasReplyEvent(
+  var Params: TDWParams; var Result: string);
+  var
+  FDQPessoas : TFDQuery;
+  json : uDWJSONObject.TJSONValue;
+begin
+  try
+     FDQPessoas := TFDQuery.Create(nil);
+     FDQPessoas.Connection := DM.FDConnection1;
+
+     json := uDWJSONObject.TJSONValue.Create;
+
+     FDQPessoas.Active := false;
+     FDQPessoas.SQL.Clear;
+     FDQPessoas.SQL.Add('Select P.NOMPES, N.DESNAC FROM PESSOA P, NACIONALIDADE N ');
+     FDQPessoas.SQL.Add('where p.codnaC = n.codnAC');
+     if(params.ItemsString['nacionalidade'].AsString<>'')then
+     begin
+       FDQPessoas.SQL.Add('and n.desnaC like :nacionalidade');
+       FDQPessoas.ParamByName('nacionalidade').Value := '%'+ params.ItemsString[ 'nacionalidade'].AsString + '%';
+
+     end;
+     FDQPessoas.SQL.Add('order by p. nompes');
+     FDQPessoas.Active := true ;
+
+     json.LoadFromDataset('',FDQPessoas,false,jmPureJSON);
+     Result := json.ToJSON
+  finally
+  json.DisposeOf ;
+  FDQpessoas.DisposeOf;
+
+
+  end;
+end;
+
+procedure TDM.DWServerEvents1EventsValidarLoginReplyEvent(var Params: TDWParams;
+  var Result: string);
+  var
+  json : TJsonObject;
+begin
+    try
+       json := TJsonObject.Create;
+       if (Params.ItemsString['login'].AsString ='') then
+       begin
+         json.AddPair('retorno','Usuario não informado');
+         Result := json.ToString;
+         exit;
+       end;
+
+
+
+      try
+      FDQUsuario.Active := false;
+      FDQUsuario.SQL.Clear;
+      FDQUsuario.SQL.Add('SELECT * FROM USUARIO WHERE  SENHAUSU=:senha and LOGINUSU=:login');
+      FDQUsuario.ParamByName('login').Value := params.ItemsString['login'].AsString;
+      FDQUsuario.ParamByName('senha').Value := params.ItemsString['senha'].AsString;
+
+      FDQUsuario.Active := true;
+
+      if(FDQUsuario.RecordCount > 0)then
+      json.AddPair('retorno','Certo')
+      else
+      json.AddPair('retorno','Usuario ou senha Invalida');
+
+      Result := json.ToString;
+
+      except
+       json.AddPair('retorno','Erro ao validar login');
+       Result := json.ToString
+     end;
+
+    finally
+      json.DisposeOf;
+    end;
+
+end;
+
+end.

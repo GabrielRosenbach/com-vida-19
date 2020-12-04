@@ -1,0 +1,10 @@
+inherited frmLogin_Windows: TfrmLogin_Windows
+  DesignerMasterStyle = 3
+  inherited imgPrincipal: TImage
+    inherited RectLogin: TRectangle
+      inherited lblLogin: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+  end
+end

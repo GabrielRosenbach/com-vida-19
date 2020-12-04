@@ -1,0 +1,17 @@
+inherited frmLogin_Windows: TfrmLogin_Windows
+  DesignerMasterStyle = 3
+  inherited imgPrincipal: TImage
+    inherited RectLogin: TRectangle
+      Margins.Bottom = 50.000000000000000000
+      Position.Y = 387.000000000000000000
+      inherited lblLogin: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited imgBottom: TImage
+      inherited lblRegister: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+  end
+end
