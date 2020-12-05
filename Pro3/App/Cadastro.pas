@@ -37,7 +37,7 @@ implementation
 {$R *.fmx}
 {$R *.LgXhdpiTb.fmx ANDROID}
 
-uses DataModule;
+uses DataModule,Login;
 
 
 procedure TfrmCadastro.RectangleBottomClick(Sender: TObject);
@@ -45,25 +45,38 @@ var
  nome,login,senha,email,tel,erro:string;
  codtipusu : string;
   aux : integer;
+
 begin
+//inicializar o aux e verifiar se é adm ou paciente
+ aux := 0;
   if(combo.Text = 'Administrador')then
     aux := 2
-      else aux := 1;
+      else
+         if(combo.Text='Paciente')then
+            aux := 1;
 
-  if((edtNome.text<>'')AND(edtLogin.text<>'')AND (edtSenha.text<>'')AND(edtEmail.text<>'') AND(edttel.text<>'')and (aux<>''))then
+  if((edtNome.text<>'')AND(edtLogin.text<>'')AND (edtSenha.text<>'')AND(aux<>0))then
   begin
     nome := edtNome.Text;
     login := edtLogin.Text;
     senha := edtSenha.Text;
     email := edtEmail.Text;
     tel := edtTel.Text;
-     codtipusu := IntToStr(aux);
+    codtipusu := IntToStr(aux);
+
     if(DM.Cadastro(nome,login,senha,email,tel,codtipusu,erro)=false)then
       showmessage('Erro:'+erro)
-      else showmessage('Usuário cadastrado');
+        else showmessage('Usuário cadastrado');
+
+     if not Assigned(frmCadastro) then
+         Application.CreateForm(TFrmLogin, frmLogin);
+         frmLogin.Show;
+         Application.MainForm := frmLogin;
+         frmCadastro.Close;
   end
      else
-        showmessage('Os campos precisam ser preenchidos.');
+
+        showmessage('Os campos [nome] [login][senha][tipo usuário] precisam ser preenchidos.');
 
 end;
 

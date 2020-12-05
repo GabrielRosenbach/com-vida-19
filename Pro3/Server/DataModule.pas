@@ -21,6 +21,8 @@ type
       var Result: string);
     procedure DWServerEvents1EventscadastroReplyEvent(var Params: TDWParams;
       var Result: string);
+    procedure DWServerEvents1EventsRedefinirSenhaReplyEvent(
+      var Params: TDWParams; var Result: string);
   private
     { Private declarations }
   public
@@ -67,6 +69,41 @@ begin
       json.DisposeOf;
        FDQCadastro.DisposeOf;
   end;
+end;
+
+procedure TDM.DWServerEvents1EventsRedefinirSenhaReplyEvent(
+  var Params: TDWParams; var Result: string);
+  var
+  FDQRedefinir : TFDQuery;
+  json : TJSONObject;
+
+begin
+ try
+
+
+  FDQRedefinir:= TFDQuery.Create(nil);
+   FDQRedefinir.Connection := DM.FDConnection1;
+   json := TJSONObject.Create;
+  try
+   FDQRedefinir.Active := false;
+   FDQRedefinir.SQL.Clear;
+   FDQRedefinir.SQL.Add('UPDATE USUARIO SET SENHAUSU=:senha WHERE LOGINUSU=:LOGIN AND EMAILUSU=:email');
+   FDQRedefinir.ParamByName('login').Value := params.ItemsString['login'].AsString;
+   FDQRedefinir.ParamByName('senha').Value := params.ItemsString['senha'].AsString;
+   FDQRedefinir.ParamByName('email').Value := params.ItemsString['email'].AsString;
+   FDQRedefinir.ExecSQL;
+
+   json.AddPair('retorno','OK')
+
+   except ON e:exception do
+    json.AddPair('retorno',e.Message);
+   end;
+   Result := json.ToString;
+
+  finally
+       json.DisposeOf;
+       FDQRedefinir.DisposeOf;
+ end;
 end;
 
 procedure TDM.DWServerEvents1EventsValidarLoginReplyEvent(var Params: TDWParams;

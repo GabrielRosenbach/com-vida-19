@@ -168,6 +168,37 @@ object DM: TDM
         EventName = 'cadastro'
         OnlyPreDefinedParams = False
         OnReplyEvent = DWServerEvents1EventscadastroReplyEvent
+      end
+      item
+        Routes = [crAll]
+        NeedAuthorization = True
+        DWParams = <
+          item
+            TypeObject = toParam
+            ObjectDirection = odIN
+            ObjectValue = ovString
+            ParamName = 'login'
+            Encoded = True
+          end
+          item
+            TypeObject = toParam
+            ObjectDirection = odIN
+            ObjectValue = ovString
+            ParamName = 'email'
+            Encoded = True
+          end
+          item
+            TypeObject = toParam
+            ObjectDirection = odIN
+            ObjectValue = ovString
+            ParamName = 'senha'
+            Encoded = True
+          end>
+        JsonMode = jmDataware
+        Name = 'RedefinirSenha'
+        EventName = 'RedefinirSenha'
+        OnlyPreDefinedParams = False
+        OnReplyEvent = DWServerEvents1EventsRedefinirSenhaReplyEvent
       end>
     Left = 72
     Top = 200

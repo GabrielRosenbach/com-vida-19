@@ -7,16 +7,16 @@ uses
   DataModule in 'DataModule.pas' {DM: TDataModule},
   Principal in 'Principal.pas' {frmPrincipal},
   Cadastro in 'Cadastro.pas' {frmCadastro},
-  PasswordRecover in 'PasswordRecover.pas' {Form2};
+  PasswordRecover in 'PasswordRecover.pas' {frmRecover};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TfrmCadastro, frmCadastro);
   Application.CreateForm(TfrmLogin, frmLogin);
+  Application.CreateForm(TfrmCadastro, frmCadastro);
   Application.CreateForm(TDM, DM);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TfrmRecover, frmRecover);
   Application.Run;
 end.

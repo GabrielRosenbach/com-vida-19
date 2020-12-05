@@ -12,6 +12,6 @@
     <Transaction>2020/11/29 19:44:42.000.394,C:\Users\ACR\Desktop\Projeto para servidor\Server\DataModule.dfm=C:\Users\ACR\Desktop\Projeto para servidor\Server\Unit1.dfm</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile iOSSimulator="iPhone5" Android64="N20EEA0000000041776" Android="N20EEA0000000041776"/>
+		<NoProfile iOSSimulator="iPhone5" Android64="" Android=""/>
 	</ActiveMobileDevice>
 </BorlandProject>

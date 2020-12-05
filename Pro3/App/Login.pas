@@ -21,8 +21,10 @@ type
     lblForgotPass: TLabel;
     imgPass: TImage;
     AreaPass: TImage;
+    imgRecover: TImage;
     procedure RectLoginClick(Sender: TObject);
     procedure imgBottomClick(Sender: TObject);
+    procedure imgRecoverClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,14 +37,9 @@ var
 implementation
 
 {$R *.fmx}
-{$R *.SmXhdpiPh.fmx ANDROID}
-{$R *.LgXhdpiPh.fmx ANDROID}
-{$R *.NmXhdpiPh.fmx ANDROID}
 {$R *.LgXhdpiTb.fmx ANDROID}
-{$R *.iPhone4in.fmx IOS}
-{$R *.XLgXhdpiTb.fmx ANDROID}
 
-uses DataModule,Principal,Cadastro;
+uses DataModule,Principal,Cadastro,PasswordRecover;
 
 
 procedure TfrmLogin.imgBottomClick(Sender: TObject);
@@ -52,6 +49,15 @@ begin
          frmCadastro.Show;
          Application.MainForm := frmCadastro;
          frmLogin.Close;
+end;
+
+procedure TfrmLogin.imgRecoverClick(Sender: TObject);
+begin
+    if not Assigned(frmRecover) then
+      Application.CreateForm(TfrmRecover, frmRecover);
+      frmRecover.show;
+      Application.MainForm := frmRecover;
+      frmLogin.Close;
 end;
 
 procedure TfrmLogin.RectLoginClick(Sender: TObject);

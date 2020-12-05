@@ -3,7 +3,7 @@ object frmLogin: TfrmLogin
   Top = 0
   Caption = 'LOGIN'
   ClientHeight = 600
-  ClientWidth = 459
+  ClientWidth = 309
   Position = MainFormCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -14,7 +14,7 @@ object frmLogin: TfrmLogin
       item
       end>
     Align = Client
-    Size.Width = 459.000000000000000000
+    Size.Width = 309.000000000000000000
     Size.Height = 600.000000000000000000
     Size.PlatformDefault = False
     object RectLogin: TRectangle
@@ -23,8 +23,8 @@ object frmLogin: TfrmLogin
       Margins.Left = 40.000000000000000000
       Margins.Right = 40.000000000000000000
       Position.X = 40.000000000000000000
-      Position.Y = 437.000000000000000000
-      Size.Width = 379.000000000000000000
+      Position.Y = 435.000000000000000000
+      Size.Width = 229.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
       XRadius = 25.000000000000000000
@@ -634,7 +634,7 @@ object frmLogin: TfrmLogin
       Margins.Right = 50.000000000000000000
       Position.X = 50.000000000000000000
       Position.Y = 30.000000000000000000
-      Size.Width = 359.000000000000000000
+      Size.Width = 209.000000000000000000
       Size.Height = 139.000000000000000000
       Size.PlatformDefault = False
     end
@@ -643,18 +643,18 @@ object frmLogin: TfrmLogin
         item
         end>
       Align = Bottom
+      Cursor = crHandPoint
       Margins.Bottom = 5.000000000000000000
       Position.Y = 560.000000000000000000
-      Size.Width = 459.000000000000000000
+      Size.Width = 309.000000000000000000
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
       OnClick = imgBottomClick
       object lblRegister: TLabel
         Align = Client
         StyledSettings = [FontColor]
-        Margins.Bottom = 5.000000000000000000
-        Size.Width = 459.000000000000000000
-        Size.Height = 30.000000000000000000
+        Size.Width = 309.000000000000000000
+        Size.Height = 35.000000000000000000
         Size.PlatformDefault = False
         TextSettings.Font.Family = 'Sitka Text'
         TextSettings.Font.Size = 20.000000000000000000
@@ -663,17 +663,6 @@ object frmLogin: TfrmLogin
         Text = 'SIGN UP'
         TabOrder = 0
       end
-    end
-    object lblForgotPass: TLabel
-      Align = Bottom
-      Margins.Bottom = 50.000000000000000000
-      Position.Y = 487.000000000000000000
-      Size.Width = 459.000000000000000000
-      Size.Height = 23.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.HorzAlign = Center
-      Text = 'Forgot your password?'
-      TabOrder = 1
     end
     object AreaLogin: TImage
       MultiResBitmap = <
@@ -1564,6 +1553,33 @@ object frmLogin: TfrmLogin
         Size.Width = 73.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
+      end
+    end
+    object imgRecover: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Bottom
+      Margins.Left = 50.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Margins.Bottom = 50.000000000000000000
+      Position.X = 50.000000000000000000
+      Position.Y = 485.000000000000000000
+      Size.Width = 209.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      OnClick = imgRecoverClick
+      object lblForgotPass: TLabel
+        Align = Center
+        Cursor = crHandPoint
+        Margins.Left = 40.000000000000000000
+        Margins.Right = 40.000000000000000000
+        Size.Width = 309.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Text = 'Forgot your password?'
+        TabOrder = 0
       end
     end
   end

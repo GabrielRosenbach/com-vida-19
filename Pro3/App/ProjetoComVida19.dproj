@@ -404,7 +404,7 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="PasswordRecover.pas">
-            <Form>Form2</Form>
+            <Form>frmRecover</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

@@ -13,12 +13,13 @@ type
     RESTResponse1: TRESTResponse;
     HTTPBasicAuthenticator1: THTTPBasicAuthenticator;
     RESTRequestCadastro: TRESTRequest;
+    RESTRequestRecover: TRESTRequest;
   private
     { Private declarations }
   public
     { Public declarations }
    function Cadastro(nome: string;login: string; senha : string; email :string;tel : string;codtipusu : string;out erro:string):boolean ;
-
+   function Recover(login: string;email:string;senha:string): boolean ;
   end;
 
 var
@@ -49,5 +50,16 @@ implementation
         erro := 'Erro ao adicionar usuário'+ DM.RESTRequestCadastro.Response.StatusCode.ToString;
       end;
 
+     end;
+
+     function TDM.Recover(login: string; email: string; senha: string):boolean;
+     begin
+         DM.RESTRequestRecover.Params.Clear;
+         DM.RESTRequestRecover.AddParameter('login',login,TRESTRequestParameterKind.pkGETorPOST);
+         DM.RESTRequestRecover.AddParameter('email',email,TRESTRequestParameterKind.pkGETorPOST);
+         DM.RESTRequestRecover.AddParameter('senha',senha,TRESTRequestParameterKind.pkGETorPOST);
+         DM.RESTRequestRecover.Execute;
+
+         Result := true;
      end;
 end.
