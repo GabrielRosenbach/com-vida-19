@@ -648,6 +648,7 @@ object frmLogin: TfrmLogin
       Size.Width = 459.000000000000000000
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
+      OnClick = imgBottomClick
       object lblRegister: TLabel
         Align = Client
         StyledSettings = [FontColor]
@@ -683,7 +684,7 @@ object frmLogin: TfrmLogin
       Size.Width = 300.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
-      object icoLogin: TImage
+      object imgLogin: TImage
         MultiResBitmap = <
           item
             Width = 512

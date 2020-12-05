@@ -28,7 +28,7 @@ inherited frmLogin_Moto360: TfrmLogin_Moto360
       Size.Width = 240.000000000000000000
     end
     inherited AreaLogin: TImage
-      inherited icoLogin: TImage
+      inherited imgLogin: TImage
         Margins.Left = 30.000000000000000000
         Margins.Right = 310.000000000000000000
         Margins.Bottom = 90.000000000000000000
@@ -39,6 +39,7 @@ inherited frmLogin_Moto360: TfrmLogin_Moto360
       inherited edtLogin: TEdit
         Margins.Bottom = 90.000000000000000000
         Size.Width = 0.000000000000000000
+        Size.Height = 0.000000000000000000
       end
     end
     inherited AreaPass: TImage

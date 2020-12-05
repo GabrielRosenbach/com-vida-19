@@ -12,6 +12,7 @@ type
     RESTRequestValidarLogin: TRESTRequest;
     RESTResponse1: TRESTResponse;
     HTTPBasicAuthenticator1: THTTPBasicAuthenticator;
+    RESTRequestCadastro: TRESTRequest;
   private
     { Private declarations }
   public

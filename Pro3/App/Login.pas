@@ -17,11 +17,12 @@ type
     imgLogo: TImage;
     lblRegister: TLabel;
     imgBottom: TImage;
-    icoLogin: TImage;
+    imgLogin: TImage;
     lblForgotPass: TLabel;
     imgPass: TImage;
     AreaPass: TImage;
     procedure RectLoginClick(Sender: TObject);
+    procedure imgBottomClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,8 +44,17 @@ implementation
 {$R *.XLgXhdpiTb.fmx ANDROID}
 {$R *.Moto360.fmx ANDROID}
 
-uses DataModule,Principal;
+uses DataModule,Principal,Cadastro;
 
+
+procedure TfrmLogin.imgBottomClick(Sender: TObject);
+begin
+     if not Assigned(frmCadastro) then
+         Application.CreateForm(TFrmCadastro, frmCadastro);
+         frmCadastro.Show;
+         Application.MainForm := frmCadastro;
+         frmLogin.Close;
+end;
 
 procedure TfrmLogin.RectLoginClick(Sender: TObject);
 begin

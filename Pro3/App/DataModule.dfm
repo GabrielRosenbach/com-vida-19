@@ -7,6 +7,7 @@ object DM: TDM
     Accept = 'application/json;q=0.9,text/plain;q=0.9,text/html'
     AcceptCharset = 'UTF-8'
     BaseURL = 'http://192.168.53.144:8082'
+    ContentType = 'application/x-www-form-urlencoded'
     Params = <>
     RaiseExceptionOn500 = False
     Left = 80
@@ -39,5 +40,14 @@ object DM: TDM
     Password = 'testserver'
     Left = 72
     Top = 240
+  end
+  object RESTRequestCadastro: TRESTRequest
+    Client = RESTClient1
+    Params = <>
+    Resource = 'Cadastro'
+    Response = RESTResponse1
+    SynchronizedEvents = False
+    Left = 216
+    Top = 304
   end
 end

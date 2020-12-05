@@ -1,0 +1,61 @@
+inherited frmLogin_XLgXhdpiTb: TfrmLogin_XLgXhdpiTb
+  ClientHeight = 1255
+  ClientWidth = 800
+  DesignerMasterStyle = 3
+  inherited imgPrincipal: TImage
+    Size.Width = 800.000000000000000000
+    Size.Height = 1255.000000000000000000
+    inherited RectLogin: TRectangle
+      Margins.Bottom = 50.000000000000000000
+      Position.Y = 1115.000000000000000000
+      Size.Width = 720.000000000000000000
+      inherited lblLogin: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited imgLogo: TImage
+      Size.Width = 700.000000000000000000
+    end
+    inherited imgBottom: TImage
+      Position.Y = 1215.000000000000000000
+      Size.Width = 800.000000000000000000
+      inherited lblRegister: TLabel
+        Size.Width = 800.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited lblForgotPass: TLabel
+      Position.Y = 1042.000000000000000000
+      Size.Width = 800.000000000000000000
+    end
+    inherited AreaLogin: TImage
+      inherited icoLogin: TImage
+        Margins.Left = 30.000000000000000000
+        Margins.Right = 310.000000000000000000
+        Margins.Bottom = 90.000000000000000000
+        Position.X = 30.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 0.000000000000000000
+      end
+      inherited edtLogin: TEdit
+        Margins.Bottom = 90.000000000000000000
+        Size.Width = 0.000000000000000000
+      end
+    end
+    inherited AreaPass: TImage
+      inherited edtSenha: TEdit
+        Margins.Top = 90.000000000000000000
+        Size.Width = 0.000000000000000000
+      end
+      inherited imgPass: TImage
+        Margins.Left = 30.000000000000000000
+        Margins.Top = 90.000000000000000000
+        Margins.Right = 310.000000000000000000
+        Position.X = 30.000000000000000000
+        Position.Y = 90.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 0.000000000000000000
+      end
+    end
+  end
+end

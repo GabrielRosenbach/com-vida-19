@@ -1,0 +1,75 @@
+inherited frmLogin_SmXhdpiPh: TfrmLogin_SmXhdpiPh
+  ClientHeight = 375
+  ClientWidth = 250
+  DesignerMasterStyle = 3
+  inherited imgPrincipal: TImage
+    Size.Width = 250.000000000000000000
+    Size.Height = 375.000000000000000000
+    inherited RectLogin: TRectangle
+      Margins.Bottom = 5.000000000000000000
+      Position.Y = 246.000000000000000000
+      Size.Width = 170.000000000000000000
+      inherited lblLogin: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited imgLogo: TImage
+      Margins.Top = 10.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 150.000000000000000000
+      Size.Height = 91.000000000000000000
+    end
+    inherited imgBottom: TImage
+      Margins.Left = 50.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Position.X = 50.000000000000000000
+      Position.Y = 344.000000000000000000
+      Size.Width = 150.000000000000000000
+      Size.Height = 26.000000000000000000
+      inherited lblRegister: TLabel
+        Size.Width = 150.000000000000000000
+        Size.Height = 21.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited lblForgotPass: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Margins.Left = 50.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Margins.Bottom = 20.000000000000000000
+      Position.X = 50.000000000000000000
+      Position.Y = 301.000000000000000000
+      Size.Width = 150.000000000000000000
+      TextSettings.Font.Size = 10.000000000000000000
+    end
+    inherited AreaLogin: TImage
+      inherited icoLogin: TImage
+        Margins.Left = 30.000000000000000000
+        Margins.Right = 310.000000000000000000
+        Margins.Bottom = 90.000000000000000000
+        Position.X = 30.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 0.000000000000000000
+      end
+      inherited edtLogin: TEdit
+        Margins.Bottom = 90.000000000000000000
+        Size.Width = 0.000000000000000000
+      end
+    end
+    inherited AreaPass: TImage
+      inherited edtSenha: TEdit
+        Margins.Top = 90.000000000000000000
+        Size.Width = 0.000000000000000000
+      end
+      inherited imgPass: TImage
+        Margins.Left = 30.000000000000000000
+        Margins.Top = 90.000000000000000000
+        Margins.Right = 310.000000000000000000
+        Position.X = 30.000000000000000000
+        Position.Y = 90.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 0.000000000000000000
+      end
+    end
+  end
+end
