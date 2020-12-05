@@ -6,7 +6,7 @@ object DM: TDM
     Authenticator = HTTPBasicAuthenticator1
     Accept = 'application/json;q=0.9,text/plain;q=0.9,text/html'
     AcceptCharset = 'UTF-8'
-    BaseURL = 'http://localhost:8082'
+    BaseURL = 'http://192.168.53.144:8082'
     Params = <>
     RaiseExceptionOn500 = False
     Left = 80

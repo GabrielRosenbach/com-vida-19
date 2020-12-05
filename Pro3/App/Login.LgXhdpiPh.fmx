@@ -32,5 +32,34 @@ inherited frmLogin_LgXhdpiPh: TfrmLogin_LgXhdpiPh
       Position.Y = 479.000000000000000000
       Size.Width = 450.000000000000000000
     end
+    inherited AreaLogin: TImage
+      inherited icoLogin: TImage
+        Margins.Left = 30.000000000000000000
+        Margins.Right = 310.000000000000000000
+        Margins.Bottom = 90.000000000000000000
+        Position.X = 30.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 0.000000000000000000
+      end
+      inherited edtLogin: TEdit
+        Margins.Bottom = 90.000000000000000000
+        Size.Width = 0.000000000000000000
+      end
+    end
+    inherited AreaPass: TImage
+      inherited edtSenha: TEdit
+        Margins.Top = 90.000000000000000000
+        Size.Width = 0.000000000000000000
+      end
+      inherited imgPass: TImage
+        Margins.Left = 30.000000000000000000
+        Margins.Top = 90.000000000000000000
+        Margins.Right = 310.000000000000000000
+        Position.X = 30.000000000000000000
+        Position.Y = 90.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 0.000000000000000000
+      end
+    end
   end
 end

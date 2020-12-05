@@ -17,9 +17,10 @@ type
     imgLogo: TImage;
     lblRegister: TLabel;
     imgBottom: TImage;
-    Image1: TImage;
+    icoLogin: TImage;
     lblForgotPass: TLabel;
     imgPass: TImage;
+    AreaPass: TImage;
     procedure RectLoginClick(Sender: TObject);
   private
     { Private declarations }
@@ -40,6 +41,7 @@ implementation
 {$R *.iPhone4in.fmx IOS}
 {$R *.Windows.fmx MSWINDOWS}
 {$R *.XLgXhdpiTb.fmx ANDROID}
+{$R *.Moto360.fmx ANDROID}
 
 uses DataModule,Principal;
 

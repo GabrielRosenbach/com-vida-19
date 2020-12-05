@@ -1,0 +1,79 @@
+inherited frmLogin_LgXhdpiTb: TfrmLogin_LgXhdpiTb
+  ClientHeight = 829
+  ClientWidth = 480
+  DesignerMasterStyle = 3
+  inherited imgPrincipal: TImage
+    Size.Width = 480.000000000000000000
+    Size.Height = 829.000000000000000000
+    inherited RectLogin: TRectangle
+      Margins.Top = 20.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.Y = 607.000000000000000000
+      Size.Width = 400.000000000000000000
+      inherited lblLogin: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited imgLogo: TImage
+      Size.Width = 380.000000000000000000
+    end
+    inherited imgBottom: TImage
+      Margins.Left = 70.000000000000000000
+      Margins.Right = 70.000000000000000000
+      Margins.Bottom = 50.000000000000000000
+      Position.X = 70.000000000000000000
+      Position.Y = 740.000000000000000000
+      Size.Width = 340.000000000000000000
+      Size.Height = 39.000000000000000000
+      inherited lblRegister: TLabel
+        Align = Center
+        Size.Width = 480.000000000000000000
+        Size.Height = 43.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited lblForgotPass: TLabel
+      StyledSettings = [Family, Style]
+      Margins.Left = 70.000000000000000000
+      Margins.Right = 70.000000000000000000
+      Position.X = 70.000000000000000000
+      Position.Y = 667.000000000000000000
+      Size.Width = 340.000000000000000000
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.FontColor = xFFA08E8E
+    end
+    inherited edtSenha: TEdit
+      TextSettings.FontColor = claWhite
+      Margins.Left = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      StyledSettings = [Style]
+    end
+    inherited edtLogin: TEdit
+      Align = VertCenter
+      Position.X = 70.000000000000000000
+      Position.Y = 317.000000000000000000
+      Margins.Left = 70.000000000000000000
+      Margins.Right = 70.000000000000000000
+      Size.Width = 340.000000000000000000
+    end
+    inherited Image1: TImage
+      Align = HorzCenter
+      Margins.Top = 100.000000000000000000
+      Margins.Right = 300.000000000000000000
+      Margins.Bottom = 220.000000000000000000
+      Position.X = 65.000000000000000000
+      Position.Y = 269.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 98.000000000000000000
+    end
+    inherited imgPass: TImage
+      Margins.Left = 25.000000000000000000
+      Margins.Top = 70.000000000000000000
+      Margins.Right = 500.000000000000000000
+      Position.X = 25.000000000000000000
+      Position.Y = 388.000000000000000000
+      Size.Width = 0.000000000000000000
+      Size.Height = 50.000000000000000000
+    end
+  end
+end

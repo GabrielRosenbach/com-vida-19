@@ -13,18 +13,6 @@ inherited frmLogin_iPhone4in: TfrmLogin_iPhone4in
         TextSettings.Font.StyleExt = {00070000000000000004000000}
       end
     end
-    inherited edtSenha: TEdit
-      Size.Height = 30.000000000000000000
-      inherited imgPass: TImage
-        Size.Height = 30.000000000000000000
-      end
-    end
-    inherited edtLogin: TEdit
-      Size.Height = 30.000000000000000000
-      inherited Image1: TImage
-        Size.Height = 30.000000000000000000
-      end
-    end
     inherited imgLogo: TImage
       Size.Width = 220.000000000000000000
     end
@@ -39,6 +27,37 @@ inherited frmLogin_iPhone4in: TfrmLogin_iPhone4in
     inherited lblForgotPass: TLabel
       Position.Y = 475.000000000000000000
       Size.Width = 320.000000000000000000
+    end
+    inherited AreaLogin: TImage
+      inherited icoLogin: TImage
+        Margins.Left = 30.000000000000000000
+        Margins.Right = 310.000000000000000000
+        Margins.Bottom = 90.000000000000000000
+        Position.X = 30.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 0.000000000000000000
+      end
+      inherited edtLogin: TEdit
+        Margins.Bottom = 90.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 30.000000000000000000
+      end
+    end
+    inherited AreaPass: TImage
+      inherited edtSenha: TEdit
+        Margins.Top = 90.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 30.000000000000000000
+      end
+      inherited imgPass: TImage
+        Margins.Left = 30.000000000000000000
+        Margins.Top = 90.000000000000000000
+        Margins.Right = 310.000000000000000000
+        Position.X = 30.000000000000000000
+        Position.Y = 90.000000000000000000
+        Size.Width = 0.000000000000000000
+        Size.Height = 0.000000000000000000
+      end
     end
   end
 end
