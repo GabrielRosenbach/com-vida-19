@@ -50,7 +50,7 @@ begin
     aux := 2
       else aux := 1;
 
-  if((edtNome.text<>'')AND(edtLogin.text<>''))then
+  if((edtNome.text<>'')AND(edtLogin.text<>'')AND (edtSenha.text<>'')AND(edtEmail.text<>'') AND(edttel.text<>'')and (aux<>''))then
   begin
     nome := edtNome.Text;
     login := edtLogin.Text;
