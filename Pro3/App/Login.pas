@@ -40,9 +40,7 @@ implementation
 {$R *.NmXhdpiPh.fmx ANDROID}
 {$R *.LgXhdpiTb.fmx ANDROID}
 {$R *.iPhone4in.fmx IOS}
-{$R *.Windows.fmx MSWINDOWS}
 {$R *.XLgXhdpiTb.fmx ANDROID}
-{$R *.Moto360.fmx ANDROID}
 
 uses DataModule,Principal,Cadastro;
 

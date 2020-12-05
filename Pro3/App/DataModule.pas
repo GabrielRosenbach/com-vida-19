@@ -17,6 +17,8 @@ type
     { Private declarations }
   public
     { Public declarations }
+   function Cadastro(nome: string;login: string; senha : string; email :string;tel : string;codtipusu : string;out erro:string):boolean ;
+
   end;
 
 var
@@ -25,7 +27,27 @@ var
 implementation
 
 {%CLASSGROUP 'FMX.Controls.TControl'}
-
+  uses Cadastro;
 {$R *.dfm}
+    function TDM.Cadastro( nome: string;login: string; senha : string; email :string;tel : string;codtipusu : string;out erro:string):boolean ;
+     begin
+     erro := '';
+     Result := true;
 
+     DM.RESTRequestCadastro.Params.Clear;
+     DM.RESTRequestCadastro.AddParameter('nome',nome,TRESTRequestParameterKind.pkGETorPOST);
+     DM.RESTRequestCadastro.AddParameter('login',login,TRESTRequestParameterKind.pkGETorPOST);
+     DM.RESTRequestCadastro.AddParameter('email',email,TRESTRequestParameterKind.pkGETorPOST);
+     DM.RESTRequestCadastro.AddParameter('tel',tel,TRESTRequestParameterKind.pkGETorPOST);
+     DM.RESTRequestCadastro.AddParameter('senha',senha,TRESTRequestParameterKind.pkGETorPOST);
+     DM.RESTRequestCadastro.AddParameter('codtipusu',codtipusu,TRESTRequestParameterKind.pkGETorPOST);
+     DM.RESTRequestCadastro.Execute;
+
+     if(DM.RESTRequestCadastro.response.statusCode<>200)then
+      begin
+        Result := false;
+        erro := 'Erro ao adicionar usuário'+ DM.RESTRequestCadastro.Response.StatusCode.ToString;
+      end;
+
+     end;
 end.

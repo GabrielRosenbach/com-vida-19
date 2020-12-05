@@ -21,6 +21,6 @@
     <Transaction>2020/12/04 01:11:18.000.490,C:\Users\ACR\Desktop\Estudos\Pro3\PasswordRecover.pas=C:\Users\ACR\Desktop\Estudos\Pro3\Unit2.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile iOSSimulator="iPhone5" Android64="" Android="N20EEA0000000041776"/>
+		<NoProfile iOSSimulator="iPhone5" Android64="N20EEA0000000041776" Android="N20EEA0000000041776"/>
 	</ActiveMobileDevice>
 </BorlandProject>

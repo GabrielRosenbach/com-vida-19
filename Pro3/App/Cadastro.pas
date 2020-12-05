@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Controls.Presentation, FMX.Edit, FMX.Objects, FMX.StdCtrls,REST.Types,
-  FMX.ComboEdit;
+  FMX.ComboEdit, FMX.Ani;
 
 type
   TfrmCadastro = class(TForm)
@@ -21,6 +21,7 @@ type
     RectangleBottom: TRectangle;
     Combo: TComboEdit;
     Edit1: TEdit;
+    FloatAnimation1: TFloatAnimation;
     procedure RectangleBottomClick(Sender: TObject);
   private
     { Private declarations }
@@ -34,28 +35,35 @@ var
 implementation
 
 {$R *.fmx}
-  uses DataModule;
+{$R *.LgXhdpiTb.fmx ANDROID}
+
+uses DataModule;
 
 
 procedure TfrmCadastro.RectangleBottomClick(Sender: TObject);
 var
- aux : integer;
+ nome,login,senha,email,tel,erro:string;
+ codtipusu : string;
+  aux : integer;
 begin
-     DM.RESTRequestCadastro.Params.Clear;
-     DM.RESTRequestCadastro.AddParameter('nome',edtNome.Text,TRESTRequestParameterKind.pkGETorPOST);
-     DM.RESTRequestCadastro.AddParameter('login',edtlogin.Text,TRESTRequestParameterKind.pkGETorPOST);
-     DM.RESTRequestCadastro.AddParameter('email',edtEmail.Text,TRESTRequestParameterKind.pkGETorPOST);
-     DM.RESTRequestCadastro.AddParameter('tel',edtTel.Text,TRESTRequestParameterKind.pkGETorPOST);
-     DM.RESTRequestCadastro.AddParameter('senha',edtSenha.Text,TRESTRequestParameterKind.pkGETorPOST);
-     //if para verificar se for adm ou paciente..
-     if(combo.Text = 'Administrador')then
-        aux := 2
-        else
-         aux :=  1;
-      edit1.Text := IntToStr(aux);
-     DM.RESTRequestCadastro.AddParameter('codtipusu',edit1.Text,TRESTRequestParameterKind.pkGETorPOST);
-     DM.RESTRequestCadastro.Execute;
+  if(combo.Text = 'Administrador')then
+    aux := 2
+      else aux := 1;
 
+  if((edtNome.text<>'')AND(edtLogin.text<>''))then
+  begin
+    nome := edtNome.Text;
+    login := edtLogin.Text;
+    senha := edtSenha.Text;
+    email := edtEmail.Text;
+    tel := edtTel.Text;
+     codtipusu := IntToStr(aux);
+    if(DM.Cadastro(nome,login,senha,email,tel,codtipusu,erro)=false)then
+      showmessage('Erro:'+erro)
+      else showmessage('Usuário cadastrado');
+  end
+     else
+        showmessage('Os campos precisam ser preenchidos.');
 
 end;
 

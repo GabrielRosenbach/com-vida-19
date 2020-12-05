@@ -159,7 +159,7 @@ object DM: TDM
           item
             TypeObject = toParam
             ObjectDirection = odINOUT
-            ObjectValue = ovInteger
+            ObjectValue = ovString
             ParamName = 'codtipusu'
             Encoded = True
           end>
