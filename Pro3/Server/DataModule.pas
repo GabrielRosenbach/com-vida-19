@@ -50,18 +50,18 @@ begin
 
    FDQCadastro.Active := false;
    FDQCadastro.SQL.Clear;
-   FDQCadastro.SQL.Add('INSERT INTO USUARIO(LOGINusu,NOMEUSU,SENHAUSU,EMAILUSU,TELUSU,CODTIPUSU');
-   FDQCadastro.SQL.Add('Values(login,nome,senha,email,tel,1)');
-    FDQCadastro.ParamByName('nome').Value := params.ItemsString['nome'].AsString;
-   FDQCadastro.ParamByName('loginusu').Value := params.ItemsString['login'].AsString;
+   FDQCadastro.SQL.Add('INSERT INTO USUARIO(LOGINusu,NOMEUSU,SENHAUSU,EMAILUSU,TELUSU,codtipusu)');
+   FDQCadastro.SQL.Add('Values(:login,:nome,:senha,:email,:tel,:codtipusu)');
+   FDQCadastro.ParamByName('login').Value := params.ItemsString['login'].AsString;
+   FDQCadastro.ParamByName('nome').Value := params.ItemsString['nome'].AsString;
    FDQCadastro.ParamByName('senha').Value := params.ItemsString['senha'].AsString;
    FDQCadastro.ParamByName('email').Value := params.ItemsString['email'].AsString;
    FDQCadastro.ParamByName('tel').Value := params.ItemsString['tel'].AsString;
-   FDQCadastro.Active := true;
+   FDQCadastro.ParamByName('codtipusu').Value := params.ItemsString['codtipusu'].AsInteger;
+   FDQCadastro.ExecSQL;
 
-   json.LoadFromDataset('', FDQCadastro,false,jmPUREJson);
 
-   Result := json.ToJSON;
+   Result := json.ToString;
 
   finally
       json.DisposeOf;

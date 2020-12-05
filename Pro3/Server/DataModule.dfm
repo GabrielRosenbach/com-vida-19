@@ -155,6 +155,13 @@ object DM: TDM
             ObjectValue = ovString
             ParamName = 'nome'
             Encoded = True
+          end
+          item
+            TypeObject = toParam
+            ObjectDirection = odINOUT
+            ObjectValue = ovInteger
+            ParamName = 'codtipusu'
+            Encoded = True
           end>
         JsonMode = jmPureJSON
         Name = 'Cadastro'
@@ -162,7 +169,7 @@ object DM: TDM
         OnlyPreDefinedParams = False
         OnReplyEvent = DWServerEvents1EventscadastroReplyEvent
       end>
-    Left = 216
+    Left = 72
     Top = 200
   end
   object FDQUsuario: TFDQuery

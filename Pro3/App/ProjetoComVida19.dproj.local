@@ -4,23 +4,23 @@
     <Transaction>2020/11/16 01:07:53.000.854,=C:\Users\ACR\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2020/11/23 09:45:19.000.748,=C:\Users\ACR\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2020/12/03 20:05:35.000.493,=C:\Users\ACR\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2020/12/03 20:05:49.000.376,C:\Users\ACR\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\ACR\Desktop\Estudos\Pro3\Login.pas</Transaction>
-    <Transaction>2020/12/03 20:05:49.000.376,C:\Users\ACR\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\ACR\Desktop\Estudos\Pro3\Login.fmx</Transaction>
-    <Transaction>2020/12/03 20:06:01.000.894,C:\Users\ACR\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\ACR\Desktop\Estudos\Pro3\ProjetoComVida19.dproj</Transaction>
+    <Transaction>2020/12/03 20:05:49.000.376,C:\Users\ACR\Desktop\Estudos\Pro3\Login.fmx=C:\Users\ACR\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2020/12/03 20:05:49.000.376,C:\Users\ACR\Desktop\Estudos\Pro3\Login.pas=C:\Users\ACR\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/12/03 20:06:01.000.894,C:\Users\ACR\Desktop\Estudos\Pro3\ProjetoComVida19.dproj=C:\Users\ACR\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2020/12/03 20:06:19.000.729,=C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.pas</Transaction>
-    <Transaction>2020/12/03 20:08:43.000.580,C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.dfm=C:\Users\ACR\Desktop\Estudos\Pro3\DataModule.dfm</Transaction>
-    <Transaction>2020/12/03 20:08:43.000.580,C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.pas=C:\Users\ACR\Desktop\Estudos\Pro3\DataModule.pas</Transaction>
+    <Transaction>2020/12/03 20:08:43.000.580,C:\Users\ACR\Desktop\Estudos\Pro3\DataModule.pas=C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.pas</Transaction>
+    <Transaction>2020/12/03 20:08:43.000.580,C:\Users\ACR\Desktop\Estudos\Pro3\DataModule.dfm=C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.dfm</Transaction>
     <Transaction>2020/12/03 20:17:17.000.570,=C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.pas</Transaction>
-    <Transaction>2020/12/03 20:17:26.000.406,C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.pas=C:\Users\ACR\Desktop\Estudos\Pro3\Principal.pas</Transaction>
-    <Transaction>2020/12/03 20:17:26.000.406,C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.fmx=C:\Users\ACR\Desktop\Estudos\Pro3\Principal.fmx</Transaction>
+    <Transaction>2020/12/03 20:17:26.000.406,C:\Users\ACR\Desktop\Estudos\Pro3\Principal.fmx=C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.fmx</Transaction>
+    <Transaction>2020/12/03 20:17:26.000.406,C:\Users\ACR\Desktop\Estudos\Pro3\Principal.pas=C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.pas</Transaction>
     <Transaction>2020/12/04 00:45:57.000.804,=C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.pas</Transaction>
-    <Transaction>2020/12/04 01:10:46.000.061,C:\Users\ACR\Desktop\Estudos\Pro3\Cadastro.fmx=C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.fmx</Transaction>
-    <Transaction>2020/12/04 01:10:46.000.061,C:\Users\ACR\Desktop\Estudos\Pro3\Cadastro.pas=C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.pas</Transaction>
+    <Transaction>2020/12/04 01:10:46.000.061,C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.fmx=C:\Users\ACR\Desktop\Estudos\Pro3\Cadastro.fmx</Transaction>
+    <Transaction>2020/12/04 01:10:46.000.061,C:\Users\ACR\Desktop\Estudos\Pro3\Unit1.pas=C:\Users\ACR\Desktop\Estudos\Pro3\Cadastro.pas</Transaction>
     <Transaction>2020/12/04 01:10:52.000.726,=C:\Users\ACR\Desktop\Estudos\Pro3\Unit2.pas</Transaction>
-    <Transaction>2020/12/04 01:11:18.000.490,C:\Users\ACR\Desktop\Estudos\Pro3\PasswordRecover.fmx=C:\Users\ACR\Desktop\Estudos\Pro3\Unit2.fmx</Transaction>
-    <Transaction>2020/12/04 01:11:18.000.490,C:\Users\ACR\Desktop\Estudos\Pro3\PasswordRecover.pas=C:\Users\ACR\Desktop\Estudos\Pro3\Unit2.pas</Transaction>
+    <Transaction>2020/12/04 01:11:18.000.490,C:\Users\ACR\Desktop\Estudos\Pro3\Unit2.pas=C:\Users\ACR\Desktop\Estudos\Pro3\PasswordRecover.pas</Transaction>
+    <Transaction>2020/12/04 01:11:18.000.490,C:\Users\ACR\Desktop\Estudos\Pro3\Unit2.fmx=C:\Users\ACR\Desktop\Estudos\Pro3\PasswordRecover.fmx</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile iOSSimulator="iPhone5" Android64="" Android="N20EEA0000000041776"/>
+		<NoProfile iOSSimulator="iPhone5" Android64="N20EEA0000000041776" Android="N20EEA0000000041776"/>
 	</ActiveMobileDevice>
 </BorlandProject>
