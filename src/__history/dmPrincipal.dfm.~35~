@@ -1,0 +1,68 @@
+object dmHome: TdmHome
+  OldCreateOrder = False
+  Height = 390
+  Width = 785
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=com-vida'
+      'User_Name=postgres'
+      'Password=123456'
+      'DriverID=PG')
+    Connected = True
+    LoginPrompt = False
+    Left = 64
+    Top = 64
+  end
+  object FDPhysPgDriverLink1: TFDPhysPgDriverLink
+    VendorHome = 
+      'D:\Ci'#234'ncias da Computa'#231#227'o\Mat'#233'rias\4'#186' Semestre\Systema ComVida-1' +
+      '9\src'
+    VendorLib = 'libpq.dll'
+    Left = 160
+    Top = 64
+  end
+  object FDQBuscarUsuario: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM usuario;')
+    Left = 728
+    Top = 16
+    object FDQBuscarUsuariocodusu: TIntegerField
+      FieldName = 'codusu'
+      Origin = 'codusu'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQBuscarUsuariocodtipusu: TIntegerField
+      FieldName = 'codtipusu'
+      Origin = 'codtipusu'
+    end
+    object FDQBuscarUsuarionomeusu: TWideStringField
+      FieldName = 'nomeusu'
+      Origin = 'nomeusu'
+      Size = 50
+    end
+    object FDQBuscarUsuarioemailusu: TWideStringField
+      FieldName = 'emailusu'
+      Origin = 'emailusu'
+      Size = 50
+    end
+    object FDQBuscarUsuariotelusu: TWideStringField
+      FieldName = 'telusu'
+      Origin = 'telusu'
+    end
+    object FDQBuscarUsuariologinusu: TWideStringField
+      FieldName = 'loginusu'
+      Origin = 'loginusu'
+    end
+    object FDQBuscarUsuariosenhausu: TWideStringField
+      FieldName = 'senhausu'
+      Origin = 'senhausu'
+    end
+  end
+  object DSBuscarUsuario: TDataSource
+    DataSet = FDQBuscarUsuario
+    Left = 728
+    Top = 80
+  end
+end

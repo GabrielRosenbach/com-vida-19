@@ -1,0 +1,67 @@
+unit home;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+
+type
+  TfrmHome = class(TForm)
+    menuHome: TMainMenu;
+    itmUsuario: TMenuItem;
+    itmConsulta: TMenuItem;
+    itmSair: TMenuItem;
+    itmLogin: TMenuItem;
+    itmLogout: TMenuItem;
+    itmAnalisarSintomas: TMenuItem;
+    itmConta: TMenuItem;
+    procedure FormShow(Sender: TObject);
+    procedure UsuarioLogado();
+    procedure UsuarioDeslogado();
+    procedure itmLoginClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmHome: TfrmHome;
+  Token: Boolean;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmHome.FormShow(Sender: TObject);
+begin
+  Token := FALSE;
+end;
+
+procedure TfrmHome.UsuarioLogado();
+begin
+  Token := TRUE;
+
+  TMenuItem(FindComponent('itmLogin')).Visible:= FALSE;
+  TMenuItem(FindComponent('itmLogout')).Visible:= TRUE;
+  TMenuItem(FindComponent('itmAnalisarSintomas')).Visible:= TRUE;
+  TMenuItem(FindComponent('itmConta')).Visible:= TRUE;
+end;
+
+procedure TfrmHome.itmLoginClick(Sender: TObject);
+begin
+  UsuarioLogado();
+end;
+
+procedure TfrmHome.UsuarioDeslogado();
+begin
+  Token := FALSE;
+
+  TMenuItem(FindComponent('Login')).Visible:= TRUE;
+  TMenuItem(FindComponent('Logout')).Visible:= FALSE;
+  TMenuItem(FindComponent('Analisar Sintomas')).Visible:= FALSE;
+  TMenuItem(FindComponent('Conta')).Visible:= FALSE;
+end;
+
+end.

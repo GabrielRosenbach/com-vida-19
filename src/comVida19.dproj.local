@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/09/20 21:00:21.000.713,=D:\Workspaces\Unoesc\Delphi\Unit1.pas</Transaction>
+    <Transaction>2020/12/05 07:37:08.000.383,=D:\Workspaces\Unoesc\Delphi\Unit1.pas</Transaction>
+    <Transaction>2020/12/05 07:38:14.000.720,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\home.pas=D:\Workspaces\Unoesc\Delphi\Unit1.pas</Transaction>
+    <Transaction>2020/12/05 07:38:14.000.721,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\home.dfm=D:\Workspaces\Unoesc\Delphi\Unit1.dfm</Transaction>
+    <Transaction>2020/12/05 07:38:50.000.725,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\comVida19.dproj=D:\Workspaces\Unoesc\Delphi\Project1.dproj</Transaction>
+    <Transaction>2020/12/05 08:35:14.000.336,=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\Unit1.pas</Transaction>
+    <Transaction>2020/12/05 08:36:49.000.119,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\dmModule.pas=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\Unit1.pas</Transaction>
+    <Transaction>2020/12/05 08:36:49.000.119,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\dmModule.dfm=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\Unit1.dfm</Transaction>
+    <Transaction>2020/12/05 08:37:44.000.340,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\dmPrincipal.dfm=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\dmModule.dfm</Transaction>
+    <Transaction>2020/12/05 08:37:44.000.340,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\dmPrincipal.pas=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\dmModule.pas</Transaction>
+    <Transaction>2020/12/05 09:24:00.000.761,=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\Unit1.pas</Transaction>
+    <Transaction>2020/12/05 09:25:13.000.693,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\Unit1.pas=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\formularios\login\UnitLogin.pas</Transaction>
+    <Transaction>2020/12/05 09:25:13.000.693,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\Unit1.dfm=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\formularios\login\UnitLogin.dfm</Transaction>
+    <Transaction>2020/12/05 09:27:08.000.029,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\home.pas=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\UnitHome.pas</Transaction>
+    <Transaction>2020/12/05 09:27:08.000.029,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\home.dfm=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\UnitHome.dfm</Transaction>
+    <Transaction>2020/12/06 10:24:02.762,=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\Unit1.pas</Transaction>
+    <Transaction>2020/12/06 10:24:41.211,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\formularios\conta\UnitConta.dfm=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\Unit1.dfm</Transaction>
+    <Transaction>2020/12/06 10:24:41.211,D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\formularios\conta\UnitConta.pas=D:\Ciências da Computação\Matérias\4º Semestre\Systema ComVida-19\src\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

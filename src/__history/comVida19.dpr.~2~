@@ -1,0 +1,16 @@
+program comVida19;
+
+uses
+  Vcl.Forms,
+  home in 'home.pas' {frmHome},
+  dmPrincipal in 'dmPrincipal.pas' {dmHome: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmHome, frmHome);
+  Application.CreateForm(TdmHome, dmHome);
+  Application.Run;
+end.
