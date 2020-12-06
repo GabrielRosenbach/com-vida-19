@@ -20,8 +20,8 @@ type
     Label1: TLabel;
     RectangleBottom: TRectangle;
     Combo: TComboEdit;
-    Edit1: TEdit;
     FloatAnimation1: TFloatAnimation;
+    Panel1: TPanel;
     procedure RectangleBottomClick(Sender: TObject);
   private
     { Private declarations }

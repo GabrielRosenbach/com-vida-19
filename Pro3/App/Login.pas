@@ -22,9 +22,12 @@ type
     imgPass: TImage;
     AreaPass: TImage;
     imgRecover: TImage;
+    Panel: TPanel;
+    imgFechar: TImage;
     procedure RectLoginClick(Sender: TObject);
     procedure imgBottomClick(Sender: TObject);
     procedure imgRecoverClick(Sender: TObject);
+    procedure imgFecharClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,6 +52,11 @@ begin
          frmCadastro.Show;
          Application.MainForm := frmCadastro;
          frmLogin.Close;
+end;
+
+procedure TfrmLogin.imgFecharClick(Sender: TObject);
+begin
+    frmLogin.Close;
 end;
 
 procedure TfrmLogin.imgRecoverClick(Sender: TObject);
