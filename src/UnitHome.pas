@@ -17,6 +17,8 @@ type
     itmAnalisarSintomas: TMenuItem;
     itmConta: TMenuItem;
     lblBemVindo: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
     procedure UsuarioLogado();
     procedure UsuarioDeslogado();
     procedure itmLoginClick(Sender: TObject);

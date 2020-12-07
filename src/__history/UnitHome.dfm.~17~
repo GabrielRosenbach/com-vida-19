@@ -2,8 +2,8 @@ object frmHome: TfrmHome
   Left = 0
   Top = 0
   Caption = 'Home'
-  ClientHeight = 464
-  ClientWidth = 1096
+  ClientHeight = 266
+  ClientWidth = 527
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,36 +17,36 @@ object frmHome: TfrmHome
   PixelsPerInch = 96
   TextHeight = 13
   object lblBemVindo: TLabel
-    Left = 1056
-    Top = 72
+    Left = 8
+    Top = 216
     Width = 56
     Height = 13
     Caption = 'lblBemVindo'
   end
   object Label1: TLabel
-    Left = 688
-    Top = 342
-    Width = 66
-    Height = 31
+    Left = 192
+    Top = 80
+    Width = 39
+    Height = 23
     Caption = 'COM'
-    Font.Charset = ANSI_CHARSET
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clBlue
-    Font.Height = -27
-    Font.Name = 'Times New Roman'
-    Font.Style = [fsBold]
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 760
-    Top = 342
-    Width = 105
-    Height = 31
+    Left = 237
+    Top = 80
+    Width = 69
+    Height = 23
     Caption = 'VIDA-19'
-    Font.Charset = ANSI_CHARSET
+    Font.Charset = DEFAULT_CHARSET
     Font.Color = clLime
-    Font.Height = -27
-    Font.Name = 'Times New Roman'
-    Font.Style = [fsBold]
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
     ParentFont = False
   end
   object menuHome: TMainMenu

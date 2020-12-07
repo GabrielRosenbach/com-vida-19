@@ -2,8 +2,8 @@ object frmHome: TfrmHome
   Left = 0
   Top = 0
   Caption = 'Home'
-  ClientHeight = 266
-  ClientWidth = 527
+  ClientHeight = 464
+  ClientWidth = 1096
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,26 +12,46 @@ object frmHome: TfrmHome
   Font.Style = []
   Menu = menuHome
   OldCreateOrder = False
+  WindowState = wsMaximized
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lblBemVindo: TLabel
-    Left = 24
-    Top = 64
+    Left = 1000
+    Top = 24
     Width = 56
     Height = 13
     Caption = 'lblBemVindo'
   end
   object Label1: TLabel
-    Left = 232
-    Top = 32
-    Width = 31
-    Height = 13
-    Caption = 'Label1'
+    Left = 480
+    Top = 206
+    Width = 39
+    Height = 23
+    Caption = 'COM'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlue
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 525
+    Top = 206
+    Width = 69
+    Height = 23
+    Caption = 'VIDA-19'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clLime
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
   end
   object menuHome: TMainMenu
-    Left = 232
-    Top = 104
+    Left = 424
+    Top = 32
     object itmUsuario: TMenuItem
       Caption = 'Usu'#225'rio'
       object itmLogin: TMenuItem

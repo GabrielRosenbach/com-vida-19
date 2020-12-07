@@ -22,6 +22,7 @@ type
     procedure itmLoginClick(Sender: TObject);
     procedure itmLogoutClick(Sender: TObject);
     procedure itmContaClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,8 +33,6 @@ type
 
 var
   frmHome: TfrmHome;
-  Token: Integer;
-  NomeUsuario: string;
 
 implementation
 
@@ -47,8 +46,14 @@ begin
   TMenuItem(FindComponent('itmLogout')).Visible:= TRUE;
   TMenuItem(FindComponent('itmAnalisarSintomas')).Visible:= TRUE;
   TMenuItem(FindComponent('itmConta')).Visible:= TRUE;
+  TMenuItem(FindComponent('itmConsulta')).Visible:= TRUE;
 
-  lblBemVindo.Caption:= 'Que bom vê-lo(a) novamente!'
+  lblBemVindo.Caption:= NomeUsuario + ', que bom vê-lo(a) novamente!';
+end;
+
+procedure TfrmHome.FormShow(Sender: TObject);
+begin
+ UsuarioDeslogado();
 end;
 
 procedure TfrmHome.itmContaClick(Sender: TObject);
@@ -72,10 +77,14 @@ procedure TfrmHome.UsuarioDeslogado();
 begin
   Token := 0;
   NomeUsuario := '';
+
+  lblBemVindo.Caption:= 'Você é novo por aqui? Efetue o cadastro!';
+
   TMenuItem(FindComponent('itmLogin')).Visible:= TRUE;
   TMenuItem(FindComponent('itmLogout')).Visible:= FALSE;
   TMenuItem(FindComponent('itmAnalisarSintomas')).Visible:= FALSE;
   TMenuItem(FindComponent('itmConta')).Visible:= FALSE;
+  TMenuItem(FindComponent('itmConsulta')).Visible:= FALSE;
 end;
 
 end.
