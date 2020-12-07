@@ -46,6 +46,7 @@ begin
   TMenuItem(FindComponent('itmLogout')).Visible:= TRUE;
   TMenuItem(FindComponent('itmAnalisarSintomas')).Visible:= TRUE;
   TMenuItem(FindComponent('itmConta')).Visible:= TRUE;
+  TMenuItem(FindComponent('itmConsulta')).Visible:= TRUE;
 
   lblBemVindo.Caption:= NomeUsuario + ', que bom vê-lo(a) novamente!';
 end;
@@ -83,6 +84,7 @@ begin
   TMenuItem(FindComponent('itmLogout')).Visible:= FALSE;
   TMenuItem(FindComponent('itmAnalisarSintomas')).Visible:= FALSE;
   TMenuItem(FindComponent('itmConta')).Visible:= FALSE;
+  TMenuItem(FindComponent('itmConsulta')).Visible:= FALSE;
 end;
 
 end.

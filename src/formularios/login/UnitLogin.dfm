@@ -95,7 +95,7 @@ object frmLogin: TfrmLogin
     Visible = False
   end
   object lblCadastroInvalido: TLabel
-    Left = 392
+    Left = 348
     Top = 446
     Width = 107
     Height = 13

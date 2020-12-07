@@ -28,7 +28,7 @@ object frmHome: TfrmHome
     object itmUsuario: TMenuItem
       Caption = 'Usu'#225'rio'
       object itmLogin: TMenuItem
-        Caption = 'Login'
+        Caption = 'Login / Cadastro'
         OnClick = itmLoginClick
       end
       object itmAnalisarSintomas: TMenuItem
