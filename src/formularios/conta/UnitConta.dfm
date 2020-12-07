@@ -278,6 +278,7 @@ object frmConta: TfrmConta
     Top = 237
     Width = 85
     Height = 21
+    Date = 44172.000000000000000000
     DateFormat = 'yyyy/MM/dd'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText

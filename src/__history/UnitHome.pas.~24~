@@ -20,6 +20,7 @@ type
     procedure UsuarioDeslogado();
     procedure itmLoginClick(Sender: TObject);
     procedure itmLogoutClick(Sender: TObject);
+    procedure itmContaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,7 +37,7 @@ implementation
 
 {$R *.dfm}
 
-uses UnitLogin;
+uses UnitLogin, UnitConta;
 
 procedure TfrmHome.UsuarioLogado();
 begin
@@ -44,6 +45,11 @@ begin
   TMenuItem(FindComponent('itmLogout')).Visible:= TRUE;
   TMenuItem(FindComponent('itmAnalisarSintomas')).Visible:= TRUE;
   TMenuItem(FindComponent('itmConta')).Visible:= TRUE;
+end;
+
+procedure TfrmHome.itmContaClick(Sender: TObject);
+begin
+  frmConta.ShowModal;
 end;
 
 procedure TfrmHome.itmLoginClick(Sender: TObject);
@@ -60,7 +66,7 @@ end;
 
 procedure TfrmHome.UsuarioDeslogado();
 begin
-  Token := null;
+  Token := 0;
   NomeUsuario := '';
   TMenuItem(FindComponent('itmLogin')).Visible:= TRUE;
   TMenuItem(FindComponent('itmLogout')).Visible:= FALSE;

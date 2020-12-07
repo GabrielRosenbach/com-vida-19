@@ -237,4 +237,17 @@ object dmHome: TdmHome
     Left = 344
     Top = 248
   end
+  object FDQSelect: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from usuario;')
+    Left = 32
+    Top = 312
+  end
+  object DSSelect: TDataSource
+    DataSet = FDQSelect
+    Left = 112
+    Top = 312
+  end
 end

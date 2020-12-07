@@ -48,13 +48,18 @@ object dmHome: TdmHome
     Connection = FDConnection1
     SQL.Strings = (
       'select '
-      '  nomeusu, emailusu, telusu, loginusu,'
+      '  codusu, nomeusu, emailusu, telusu, loginusu,'
       '  senhausu'
       'from '
       '   usuario'
       '  ')
     Left = 112
     Top = 168
+    object FDQContacodusu: TIntegerField
+      FieldName = 'codusu'
+      Origin = 'codusu'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
     object FDQContanomeusu: TWideStringField
       FieldName = 'nomeusu'
       Origin = 'nomeusu'
@@ -76,53 +81,6 @@ object dmHome: TdmHome
     object FDQContasenhausu: TWideStringField
       FieldName = 'senhausu'
       Origin = 'senhausu'
-    end
-    object FDQContaaltpac: TBCDField
-      AutoGenerateValue = arDefault
-      FieldName = 'altpac'
-      Origin = 'altpac'
-      Precision = 3
-      Size = 2
-    end
-    object FDQContapesopac: TBCDField
-      AutoGenerateValue = arDefault
-      FieldName = 'pesopac'
-      Origin = 'pesopac'
-      Precision = 5
-      Size = 2
-    end
-    object FDQContadatanaspac: TDateField
-      AutoGenerateValue = arDefault
-      FieldName = 'datanaspac'
-      Origin = 'datanaspac'
-    end
-    object FDQContaruaend: TWideStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'ruaend'
-      Origin = 'ruaend'
-      Size = 50
-    end
-    object FDQContanumend: TIntegerField
-      AutoGenerateValue = arDefault
-      FieldName = 'numend'
-      Origin = 'numend'
-    end
-    object FDQContabaiend: TWideStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'baiend'
-      Origin = 'baiend'
-      Size = 50
-    end
-    object FDQContanomcid: TWideStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'nomcid'
-      Origin = 'nomcid'
-      Size = 50
-    end
-    object FDQContacodest: TIntegerField
-      AutoGenerateValue = arDefault
-      FieldName = 'codest'
-      Origin = 'codest'
     end
   end
   object DSConta: TDataSource
@@ -165,29 +123,74 @@ object dmHome: TdmHome
     Connection = FDConnection1
     SQL.Strings = (
       'select '
-      '  pac.altpac, pac.pesopac, pac.datanaspac'
+      '  codpac, codusu, codend, altpac, pesopac, datanaspac'
       'from '
-      '   usuario usu '
-      'left join paciente pac on'
-      '   usu.codusu = pac.codusu'
-      '  ')
+      '   paciente ')
     Left = 184
     Top = 168
+    object FDQPacientecodpac: TIntegerField
+      FieldName = 'codpac'
+      Origin = 'codpac'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object FDQPacientecodend: TIntegerField
+      FieldName = 'codend'
+      Origin = 'codend'
+    end
+    object FDQPacientealtpac: TBCDField
+      FieldName = 'altpac'
+      Origin = 'altpac'
+      Precision = 3
+      Size = 2
+    end
+    object FDQPacientepesopac: TBCDField
+      FieldName = 'pesopac'
+      Origin = 'pesopac'
+      Precision = 5
+      Size = 2
+    end
+    object FDQPacientedatanaspac: TDateField
+      FieldName = 'datanaspac'
+      Origin = 'datanaspac'
+    end
+    object FDQPacientecodusu: TIntegerField
+      FieldName = 'codusu'
+      Origin = 'codusu'
+    end
   end
   object FDQEndereco: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
       'select '
-      '  ende.ruaend, ende.numend, ende.baiend'
+      '  codend, codcid, ruaend, numend, baiend'
       'from '
-      '   usuario usu '
-      'left join paciente pac on'
-      '   usu.codusu = pac.codusu'
-      'left join endereco ende on '
-      '   pac.codend = ende.codend'
+      '   endereco'
       '  ')
     Left = 272
     Top = 168
+    object FDQEnderecocodcid: TIntegerField
+      FieldName = 'codcid'
+      Origin = 'codcid'
+    end
+    object FDQEnderecoruaend: TWideStringField
+      FieldName = 'ruaend'
+      Origin = 'ruaend'
+      Size = 50
+    end
+    object FDQEndereconumend: TIntegerField
+      FieldName = 'numend'
+      Origin = 'numend'
+    end
+    object FDQEnderecobaiend: TWideStringField
+      FieldName = 'baiend'
+      Origin = 'baiend'
+      Size = 50
+    end
+    object FDQEnderecocodend: TIntegerField
+      FieldName = 'codend'
+      Origin = 'codend'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
   end
   object DSPaciente: TDataSource
     DataSet = FDQPaciente
@@ -203,18 +206,31 @@ object dmHome: TdmHome
     Connection = FDConnection1
     SQL.Strings = (
       'select '
-      '  cid.nomcid, cid.codest'
+      '  codcid, nomcid, codest, cepcid'
       'from '
-      '   usuario usu '
-      'left join paciente pac on'
-      '   usu.codusu = pac.codusu'
-      'left join endereco ende on '
-      '   pac.codend = ende.codend'
-      'left join cidade cid on'
-      '   ende.codcid = cid.codcid'
+      '   cidade'
       '  ')
     Left = 344
     Top = 168
+    object FDQCidadenomcid: TWideStringField
+      FieldName = 'nomcid'
+      Origin = 'nomcid'
+      Size = 50
+    end
+    object FDQCidadecodest: TIntegerField
+      FieldName = 'codest'
+      Origin = 'codest'
+    end
+    object FDQCidadecepcid: TWideStringField
+      FieldName = 'cepcid'
+      Origin = 'cepcid'
+      Size = 10
+    end
+    object FDQCidadecodcid: TIntegerField
+      FieldName = 'codcid'
+      Origin = 'codcid'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
   end
   object DSCidade: TDataSource
     DataSet = FDQCidade

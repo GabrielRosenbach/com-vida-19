@@ -26,19 +26,35 @@ type
     FDQEstadocodreg: TIntegerField;
     FDQEstadonomest: TWideStringField;
     FDQEstadosigest: TWideStringField;
+    FDQPaciente: TFDQuery;
+    FDQEndereco: TFDQuery;
+    DSPaciente: TDataSource;
+    DSEndereco: TDataSource;
+    FDQCidade: TFDQuery;
+    DSCidade: TDataSource;
     FDQContanomeusu: TWideStringField;
     FDQContaemailusu: TWideStringField;
     FDQContatelusu: TWideStringField;
     FDQContaloginusu: TWideStringField;
     FDQContasenhausu: TWideStringField;
-    FDQContaaltpac: TBCDField;
-    FDQContapesopac: TBCDField;
-    FDQContadatanaspac: TDateField;
-    FDQContaruaend: TWideStringField;
-    FDQContanumend: TIntegerField;
-    FDQContabaiend: TWideStringField;
-    FDQContanomcid: TWideStringField;
-    FDQContacodest: TIntegerField;
+    FDQPacientealtpac: TBCDField;
+    FDQPacientepesopac: TBCDField;
+    FDQPacientedatanaspac: TDateField;
+    FDQEnderecoruaend: TWideStringField;
+    FDQEndereconumend: TIntegerField;
+    FDQEnderecobaiend: TWideStringField;
+    FDQCidadenomcid: TWideStringField;
+    FDQCidadecodest: TIntegerField;
+    FDQContacodusu: TIntegerField;
+    FDQPacientecodpac: TIntegerField;
+    FDQPacientecodend: TIntegerField;
+    FDQEnderecocodcid: TIntegerField;
+    FDQCidadecepcid: TWideStringField;
+    FDQPacientecodusu: TIntegerField;
+    FDQEnderecocodend: TIntegerField;
+    FDQCidadecodcid: TIntegerField;
+    FDQSelect: TFDQuery;
+    DSSelect: TDataSource;
   private
     { Private declarations }
   public

@@ -53,6 +53,8 @@ type
     FDQPacientecodusu: TIntegerField;
     FDQEnderecocodend: TIntegerField;
     FDQCidadecodcid: TIntegerField;
+    FDQSelect: TFDQuery;
+    DSSelect: TDataSource;
   private
     { Private declarations }
   public

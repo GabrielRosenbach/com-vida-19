@@ -46,7 +46,10 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnSalvarClick(Sender: TObject);
   private
-    { Private declarations }
+    function SalvarEndereco(): Boolean;
+    procedure ManipularCidade();
+    function BuscarIdCidade(): Integer;
+    procedure ManipularEndereco();
   public
     { Public declarations }
   end;
@@ -65,6 +68,8 @@ begin
   dmHome.FDQConta.Edit;
   dmHome.FDQConta.Post;
 
+
+
   if (dmHome.FDQPaciente.RowsAffected > 0) then
   begin
     dmHome.FDQPaciente.Insert;
@@ -81,7 +86,51 @@ begin
     dmHome.FDQPaciente.FieldByName('datanasusu').AsDateTime := Now;
     dmHome.FDQPaciente.Post;
   end;
+end;
 
+procedure TfrmConta.ManipularCidade();
+begin
+  if (dmHome.FDQCidade.RowsAffected > 0) then
+  begin
+    dmHome.FDQCidade.Insert;
+    dmHome.FDQCidade.Post;
+  end
+  else
+  begin
+    dmHome.FDQCidade.Edit;
+    dmHome.FDQCidade.Post;
+  end;
+end;
+
+procedure TfrmConta.ManipularEndereco();
+begin
+  if (dmHome.FDQEndereco.RowsAffected > 0) then
+  begin
+    dmHome.FDQEndereco.Insert;
+    dmHome.FDQEndereco.Post;
+  end
+  else
+  begin
+    dmHome.FDQEndereco.Edit;
+    dmHome.FDQEndereco.Post;
+  end;
+end;
+
+function TfrmConta.BuscarIdCidade(): Integer;
+begin
+  dmHome.FDQSelect.SQL.Clear;
+  dmHome.FDQSelect.SQL.Add('select max(codcid) from cidade');
+  dmHome.FDQSelect.Post;
+end;
+
+
+
+function TfrmConta.SalvarEndereco(): Boolean;
+begin
+  dmHome.FDQPaciente.FieldByName('codusu').AsInteger := dmHome.FDQConta.Fields.FieldByName('codusu').AsInteger;
+  dmHome.FDQPaciente.FieldByName('codend').AsInteger := dmHome.FDQEndereco.Fields.FieldByName('codend').AsInteger;
+  dmHome.FDQPaciente.FieldByName('datanasusu').AsDateTime := Now;
+  dmHome.FDQPaciente.Post;
 end;
 
 procedure TfrmConta.FormClose(Sender: TObject; var Action: TCloseAction);

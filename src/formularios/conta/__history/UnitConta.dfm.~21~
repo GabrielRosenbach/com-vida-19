@@ -3,7 +3,7 @@ object frmConta: TfrmConta
   Top = 0
   Caption = 'Conta'
   ClientHeight = 622
-  ClientWidth = 615
+  ClientWidth = 573
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -91,7 +91,6 @@ object frmConta: TfrmConta
     Width = 38
     Height = 13
     Caption = 'Data de'
-    FocusControl = edtDataNasc
   end
   object Label3: TLabel
     Left = 371
@@ -140,11 +139,19 @@ object frmConta: TfrmConta
     FocusControl = DBEdit4
   end
   object Label9: TLabel
-    Left = 38
+    Left = 289
     Top = 480
     Width = 37
     Height = 13
     Caption = 'Estado:'
+  end
+  object Label10: TLabel
+    Left = 38
+    Top = 480
+    Width = 23
+    Height = 13
+    Caption = 'CEP:'
+    FocusControl = DBEdit1
   end
   object edtNome: TDBEdit
     Left = 88
@@ -197,7 +204,7 @@ object frmConta: TfrmConta
     Width = 73
     Height = 21
     DataField = 'altpac'
-    DataSource = dmHome.DSConta
+    DataSource = dmHome.DSPaciente
     TabOrder = 5
   end
   object edtPeso: TDBEdit
@@ -206,16 +213,8 @@ object frmConta: TfrmConta
     Width = 73
     Height = 21
     DataField = 'pesopac'
-    DataSource = dmHome.DSConta
+    DataSource = dmHome.DSPaciente
     TabOrder = 6
-  end
-  object edtDataNasc: TDBEdit
-    Left = 448
-    Top = 237
-    Width = 73
-    Height = 21
-    DataField = 'datanaspac'
-    TabOrder = 7
   end
   object btnSalvar: TButton
     Left = 194
@@ -223,17 +222,17 @@ object frmConta: TfrmConta
     Width = 168
     Height = 25
     Caption = 'Salvar Dados'
-    TabOrder = 8
+    TabOrder = 7
     OnClick = btnSalvarClick
   end
   object edtRua: TDBEdit
-    Left = 88
+    Left = 87
     Top = 333
     Width = 433
     Height = 21
     DataField = 'ruaend'
-    DataSource = dmHome.DSConta
-    TabOrder = 9
+    DataSource = dmHome.DSEndereco
+    TabOrder = 8
   end
   object edtNumero: TDBEdit
     Left = 90
@@ -241,8 +240,8 @@ object frmConta: TfrmConta
     Width = 134
     Height = 21
     DataField = 'numend'
-    DataSource = dmHome.DSConta
-    TabOrder = 10
+    DataSource = dmHome.DSEndereco
+    TabOrder = 9
   end
   object DBEdit3: TDBEdit
     Left = 352
@@ -250,8 +249,8 @@ object frmConta: TfrmConta
     Width = 168
     Height = 21
     DataField = 'baiend'
-    DataSource = dmHome.DSConta
-    TabOrder = 11
+    DataSource = dmHome.DSEndereco
+    TabOrder = 10
   end
   object DBEdit4: TDBEdit
     Left = 90
@@ -259,14 +258,42 @@ object frmConta: TfrmConta
     Width = 430
     Height = 21
     DataField = 'nomcid'
-    DataSource = dmHome.DSConta
+    DataSource = dmHome.DSCidade
+    TabOrder = 11
+  end
+  object cbbEstado: TDBLookupComboBox
+    Left = 352
+    Top = 477
+    Width = 160
+    Height = 21
+    DataField = 'codest'
+    DataSource = dmHome.DSCidade
+    KeyField = 'codest'
+    ListField = 'nomest'
+    ListSource = dmHome.DSEstado
     TabOrder = 12
   end
-  object DBLookupComboBox1: TDBLookupComboBox
-    Left = 90
-    Top = 472
-    Width = 145
+  object DatePicker1: TDatePicker
+    Left = 436
+    Top = 237
+    Width = 85
     Height = 21
+    DateFormat = 'yyyy/MM/dd'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    MaxYear = 2020
     TabOrder = 13
+  end
+  object DBEdit1: TDBEdit
+    Left = 90
+    Top = 477
+    Width = 134
+    Height = 21
+    DataField = 'cepcid'
+    DataSource = dmHome.DSCidade
+    TabOrder = 14
   end
 end

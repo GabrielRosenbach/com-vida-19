@@ -1,9 +1,9 @@
 object frmHome: TfrmHome
   Left = 0
   Top = 0
-  Caption = 'frmHome'
-  ClientHeight = 231
-  ClientWidth = 505
+  Caption = 'Home'
+  ClientHeight = 266
+  ClientWidth = 527
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,6 +15,13 @@ object frmHome: TfrmHome
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
+  object lblBemVindo: TLabel
+    Left = 328
+    Top = 40
+    Width = 56
+    Height = 13
+    Caption = 'lblBemVindo'
+  end
   object menuHome: TMainMenu
     Left = 232
     Top = 104
@@ -24,11 +31,6 @@ object frmHome: TfrmHome
         Caption = 'Login'
         OnClick = itmLoginClick
       end
-      object itmLogout: TMenuItem
-        Caption = 'Logout'
-        Visible = False
-        OnClick = UsuarioDeslogado
-      end
       object itmAnalisarSintomas: TMenuItem
         Caption = 'Analisar Sintomas'
         Visible = False
@@ -36,6 +38,12 @@ object frmHome: TfrmHome
       object itmConta: TMenuItem
         Caption = 'Conta'
         Visible = False
+        OnClick = itmContaClick
+      end
+      object itmLogout: TMenuItem
+        Caption = 'Logout'
+        Visible = False
+        OnClick = itmLogoutClick
       end
     end
     object itmConsulta: TMenuItem
@@ -43,6 +51,8 @@ object frmHome: TfrmHome
     end
     object itmSair: TMenuItem
       Caption = 'Sair'
+    end
+    object TMenuItem
     end
   end
 end

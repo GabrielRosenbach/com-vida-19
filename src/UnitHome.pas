@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls;
 
 type
   TfrmHome = class(TForm)
@@ -16,11 +16,13 @@ type
     itmLogout: TMenuItem;
     itmAnalisarSintomas: TMenuItem;
     itmConta: TMenuItem;
+    lblBemVindo: TLabel;
     procedure UsuarioLogado();
     procedure UsuarioDeslogado();
     procedure itmLoginClick(Sender: TObject);
     procedure itmLogoutClick(Sender: TObject);
     procedure itmContaClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,7 +33,6 @@ type
 
 var
   frmHome: TfrmHome;
-  Token: Integer;
 
 implementation
 
@@ -45,6 +46,13 @@ begin
   TMenuItem(FindComponent('itmLogout')).Visible:= TRUE;
   TMenuItem(FindComponent('itmAnalisarSintomas')).Visible:= TRUE;
   TMenuItem(FindComponent('itmConta')).Visible:= TRUE;
+
+  lblBemVindo.Caption:= NomeUsuario + ', que bom vê-lo(a) novamente!';
+end;
+
+procedure TfrmHome.FormShow(Sender: TObject);
+begin
+ UsuarioDeslogado();
 end;
 
 procedure TfrmHome.itmContaClick(Sender: TObject);
@@ -68,6 +76,9 @@ procedure TfrmHome.UsuarioDeslogado();
 begin
   Token := 0;
   NomeUsuario := '';
+
+  lblBemVindo.Caption:= 'Você é novo por aqui? Efetue o cadastro!';
+
   TMenuItem(FindComponent('itmLogin')).Visible:= TRUE;
   TMenuItem(FindComponent('itmLogout')).Visible:= FALSE;
   TMenuItem(FindComponent('itmAnalisarSintomas')).Visible:= FALSE;

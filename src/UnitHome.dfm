@@ -12,8 +12,16 @@ object frmHome: TfrmHome
   Font.Style = []
   Menu = menuHome
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
+  object lblBemVindo: TLabel
+    Left = 24
+    Top = 64
+    Width = 56
+    Height = 13
+    Caption = 'lblBemVindo'
+  end
   object menuHome: TMainMenu
     Left = 232
     Top = 104
