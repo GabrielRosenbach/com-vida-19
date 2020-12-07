@@ -30,6 +30,7 @@ object frmHome: TfrmHome
       object itmConta: TMenuItem
         Caption = 'Conta'
         Visible = False
+        OnClick = itmContaClick
       end
       object itmLogout: TMenuItem
         Caption = 'Logout'

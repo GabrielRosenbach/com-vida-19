@@ -125,7 +125,7 @@ object frmLogin: TfrmLogin
     Left = 94
     Top = 53
     Width = 6
-    Height = 16
+    Height = 13
     Caption = '*'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clHotLight

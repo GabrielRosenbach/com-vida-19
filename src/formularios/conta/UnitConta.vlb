@@ -29,7 +29,7 @@ Coordinates=422,1,52,51
 Coordinates=422,123,52,51
 
 []
-Coordinates=268,141,77,33
+Coordinates=422,193,54,33
 
 [edtNome]
 Coordinates=153,160,54,33
@@ -51,7 +51,4 @@ Coordinates=35,231,54,33
 
 [edtPeso]
 Coordinates=422,71,54,33
-
-[edtDataNasc]
-Coordinates=422,193,54,33
 

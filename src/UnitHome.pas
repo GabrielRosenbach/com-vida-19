@@ -20,6 +20,7 @@ type
     procedure UsuarioDeslogado();
     procedure itmLoginClick(Sender: TObject);
     procedure itmLogoutClick(Sender: TObject);
+    procedure itmContaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,6 +45,11 @@ begin
   TMenuItem(FindComponent('itmLogout')).Visible:= TRUE;
   TMenuItem(FindComponent('itmAnalisarSintomas')).Visible:= TRUE;
   TMenuItem(FindComponent('itmConta')).Visible:= TRUE;
+end;
+
+procedure TfrmHome.itmContaClick(Sender: TObject);
+begin
+  frmConta.ShowModal;
 end;
 
 procedure TfrmHome.itmLoginClick(Sender: TObject);
